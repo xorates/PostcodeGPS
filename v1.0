@@ -4,7 +4,7 @@ import requests;
 
 r=requests.post("http://wheredoivote.co.uk/api/beta/postcode/"+str(input("Enter postcode here: ")).replace(" ","")+".json").json();
 
-lat,long=r["postcode_location"]["geometry"]["point"]["coordinates"];
-print("https://www.google.com/maps/search/?api=1&query="+str(long)+","+str(lat));
+lat,long=r["postcode_location"]["geometry"]["coordinates"];
+print("{0}{1},{2}".format("https://www.google.com/maps/search/?api=1&query=",long,lat));
 
 input();

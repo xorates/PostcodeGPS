@@ -8,6 +8,7 @@ request_data=requests.post(request_URL).json(); #HTTP request then sent to URL l
 lat,long=request_data["postcode_location"]["geometry"]["coordinates"]; #["coordinates"] is two values, which are sotred in respective variables.
 print("{0}{1},{2}".format("https://www.google.com/maps/search/?api=1&query=",long,lat)); #Prints Google Maps URL for the coordinated extracted, using replacement fields string formatting for neatness.
 
+input(); #prevents programme from closing after result is returned.
 
 #
 #
